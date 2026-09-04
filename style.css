@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #0b0f19;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.btn-sec {
+  background: #1f293d;
+  color: #ccc;
+  border: 1px solid #334155;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.poll-card {
+  background: #131b2e;
+  border: 1px solid #1e293b;
+  border-radius: 20px;
+  padding: 32px;
+}
+
+.poll-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 28px;
+}
+
+.badge-live {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.poll-header h2 {
+  font-size: 26px;
+  margin: 8px 0 4px 0;
+}
+
+.subtitle {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.total-box {
+  background: #1e293b;
+  padding: 12px 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.total-box span {
+  display: block;
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.total-box strong {
+  font-size: 24px;
+}
+
+/* Grid Cards */
+.candidates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.card {
+  background: #1e293b;
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-icon {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.card p {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.vote-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.progress-bar {
+  background: #0f172a;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.progress-fill {
+  background: #38bdf8;
+  height: 100%;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.vote-btn {
+  background: #6366f1;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.vote-btn:hover {
+  background: #4f46e5;
+}
+
+/* Leader Box */
+.leader-box {
+  background: #182238;
+  border: 1px solid #283553;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.leader-title {
+  font-size: 11px;
+  color: #f59e0b;
+  font-weight: bold;
+}
+
+.leader-box h3 {
+  font-size: 20px;
+  margin: 4px 0;
+}
+
+.leader-box p {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.trophy-icon {
+  font-size: 36px;
+}
+
+/* Feedback Box */
+.feedback-box {
+  background: #0f172a;
+  text-align: center;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #38bdf8;
+}
+
+.card-img-wrapper {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

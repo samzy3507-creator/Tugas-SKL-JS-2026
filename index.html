@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voting Universitas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app-container">
+    <!-- Header Atas -->
+    <header class="top-header">
+      <h1>Voting Universitas Favorit</h1>
+      <div class="header-btns">
+        <button id="resetBtn" class="btn-sec">🔄 Reset</button>
+        <button id="fullscreenBtn" class="btn-sec">⛶ Fullscreen</button>
+      </div>
+    </header>
+
+    <!-- Main Card Container -->
+    <main class="poll-card">
+      <div class="poll-header">
+        <div>
+          <span class="badge-live">● LIVE POLL</span>
+          <h2>Mana Kampus Impianmu? 🏛️</h2>
+          <p class="subtitle">Pilih salah satu universitas/lembaga impian yang ingin kamu tuju.</p>
+        </div>
+        <div class="total-box">
+          <span>Total Votes</span>
+          <strong id="totalVotes">0</strong>
+        </div>
+      </div>
+
+      <!-- Grid Candidate Cards -->
+      <div class="candidates-grid">
+        <!-- Candidate 1: UIM -->
+        <div class="card">
+          <div class="card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1564769625905-50e93615e769?w=500" alt="UIM Madinah" class="card-img">
+          </div>
+          <h3>UIM (Madinah)</h3>
+          <p>Universitas Islam Madinah, Arab Saudi.</p>
+          <div class="vote-info">
+            <span id="votes-0">0 vote</span>
+            <span id="percent-0">0%</span>
+          </div>
+          <div class="progress-bar"><div id="bar-0" class="progress-fill"></div></div>
+          <button class="vote-btn" onclick="vote(0)">Vote UIM 🏛️</button>
+        </div>
+
+        <!-- Candidate 2: Ummul Qura -->
+        <div class="card">
+          <div class="card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=500" alt="Ummul Qura Makkah" class="card-img">
+          </div>
+          <h3>Ummul Qura</h3>
+          <p>Universitas Umm Al-Qura, Makkah Mukarramah.</p>
+          <div class="vote-info">
+            <span id="votes-1">0 vote</span>
+            <span id="percent-1">0%</span>
+          </div>
+          <div class="progress-bar"><div id="bar-1" class="progress-fill"></div></div>
+          <button class="vote-btn" onclick="vote(1)">Vote Ummul Qura 🕌</button>
+        </div>
+
+        <!-- Candidate 3: LIPIA -->
+        <div class="card">
+          <div class="card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?w=500" alt="LIPIA Jakarta" class="card-img">
+          </div>
+          <h3>LIPIA Jakarta</h3>
+          <p>Lembaga Ilmu Pengetahuan Islam dan Arab, Jakarta.</p>
+          <div class="vote-info">
+            <span id="votes-2">0 vote</span>
+            <span id="percent-2">0%</span>
+          </div>
+          <div class="progress-bar"><div id="bar-2" class="progress-fill"></div></div>
+          <button class="vote-btn" onclick="vote(2)">Vote LIPIA 📚</button>
+        </div>
+      </div>
+
+      <!-- Current Leader -->
+      <div class="leader-box">
+        <div class="leader-info">
+          <span class="leader-title">🏆 LEADER SAAT INI</span>
+          <h3 id="leaderName">Belum ada pemenang</h3>
+          <p id="leaderDesc">Belum ada vote yang masuk.</p>
+        </div>
+        <div class="trophy-icon">🏆</div>
+      </div>
+
+      <!-- Feedback Toast -->
+      <div id="feedback" class="feedback-box">
+        Silakan pilih salah satu universitas di atas!
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
