@@ -1,4 +1,4 @@
-// Data kandidat
+
 const candidates = [
   { name: "Mini Game", icon: "🎮", votes: 0 },
   { name: "Mini Store", icon: "🛒", votes: 0 },
@@ -8,7 +8,6 @@ const candidates = [
 
 let totalVotes = 0;
 
-// Fungsi untuk melakukan vote
 function vote(index) {
   candidates[index].votes++;
   totalVotes++;
@@ -17,11 +16,11 @@ function vote(index) {
   showFeedback(`✅ Vote berhasil! Kamu memilih ${candidates[index].icon} ${candidates[index].name}`);
 }
 
-// Update Seluruh Tampilan DOM
+
 function updateUI() {
   document.querySelector("#totalVotes").textContent = totalVotes;
 
-  // Update tiap kartu kandidat
+
   candidates.forEach((cand, i) => {
     const percent = totalVotes === 0 ? 0 : Math.round((cand.votes / totalVotes) * 100);
     
@@ -33,7 +32,7 @@ function updateUI() {
   updateLeader();
 }
 
-// Update Pemenang Sementara (Current Leader)
+
 function updateLeader() {
   if (totalVotes === 0) return;
 
@@ -48,12 +47,12 @@ function updateLeader() {
   document.querySelector("#leaderDesc").textContent = `${leader.votes} vote — sementara berada di posisi pertama 🔥`;
 }
 
-// Tampilkan Pesan Feedback
+
 function showFeedback(msg) {
   document.querySelector("#feedback").textContent = msg;
 }
 
-// Event Listener Tombol Reset
+
 document.querySelector("#resetBtn").addEventListener("click", () => {
   candidates.forEach(cand => cand.votes = 0);
   totalVotes = 0;
@@ -65,7 +64,7 @@ document.querySelector("#resetBtn").addEventListener("click", () => {
   updateUI();
 });
 
-// Event Listener Fullscreen
+
 document.querySelector("#fullscreenBtn").addEventListener("click", () => {
   if (!document.fullscreenElement) {
     document.documentElement.requestFullscreen();
